@@ -6,8 +6,11 @@ package com.ilyapolyanskiy.practice.module02.task022;
 public class TKRunner {
     public static void main(String[] args) {
         int balance = 100;
-        int withdrawal = 95;
+        int withdrawal = 10;
         TactionKeeper keeper = new TactionKeeper();
-        System.out.println(keeper.tactionKeeper(balance, withdrawal));
+        if (keeper.balanceCalc(balance, withdrawal) > 0)
+            System.out.println("OK " + keeper.commissionCalc(withdrawal) + " " + keeper.balanceCalc(balance, withdrawal));
+        else
+            System.out.println("NO");
     }
 }
