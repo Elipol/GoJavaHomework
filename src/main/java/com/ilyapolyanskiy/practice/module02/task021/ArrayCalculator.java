@@ -58,23 +58,27 @@ public class ArrayCalculator{
     public String modulus(int array[]){
         return "\nМодуль первого элемента: " + Math.abs(array[0]) + "\nМодуль последнего " + Math.abs(array[array.length - 1]);
     }
-   // public String modulus(double array[]){
-     //   double last = array[array.length];
-       // return"\nмодуль первого элемента: " + Math.abs(array[0]) + "; модуль последнего: " + Math.abs(last);
-    //}
+    public String modulus(double array[]){
+        return"\nмодуль первого элемента: " + Math.abs(array[0]) + "; модуль последнего: " + Math.abs(array[array.length - 1]);
+    }
 
     public String secondLargest(int array[]) {
-        int iSecondMax = array[0];
+        int iSecondMax = array[0], numer = 1;
         for (int i = 0; i < array.length; i++)
-            if (iSecondMax < array[i] && array[i] != iMax)
+            if (iSecondMax < array[i] && array[i] != iMax) {
                 iSecondMax = array[i];
-        return "\nВторой по величине элемент: " + iSecondMax;
+                numer = i + 1;
+            }
+        return "\nВторой по величине элемент = " + iSecondMax + " №" + numer;
     }
     public String secondLargest(double array[]) {
         double dSecondMax = array[0];
+        int numer = 1;
         for (int i = 0; i < array.length; i++)
-            if (dSecondMax < array[i] && dSecondMax != iMax)
+            if (dSecondMax < array[i] && dSecondMax != iMax){
                 dSecondMax = array[i];
-        return "\nВторой по величине элемент: " + dSecondMax;
+                numer = i + 1;
+            }
+        return "\nВторой по величине элемент: " + dSecondMax + " №" + numer;
     }
 }
