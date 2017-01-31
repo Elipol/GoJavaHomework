@@ -20,5 +20,7 @@ public class AuthorisationTactionRunner {
         TactionKeeper nameKeeper = new TactionKeeper();
         if (nameKeeper.balanceCalc(balances[index], withdrawal) > 0)
             System.out.println(ownerName + " " + withdrawal + " " + " " + nameKeeper.balanceCalc(balances[index], withdrawal));
+        else
+            System.out.println(ownerNames[index] + " NO");
     }
 }
