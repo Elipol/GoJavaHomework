@@ -1,5 +1,4 @@
 package com.ilyapolyanskiy.practice.module02.task021;
-
 /**
  * Created by GVNcoder on 30.01.2017.
  */
@@ -14,7 +13,7 @@ public class ArrayCalculator{
         double dCount = 0;
         for (int i = 0; i < array.length; i++)
             dCount += array[i];
-        System.out.println( "\nСумма элементов массива: " + dCount);
+        System.out.println("\nСумма элементов массива: " + dCount);
     }
     public void minDivMax(int array[]) {
         int iMin = 0, iMax = 0;
