@@ -31,47 +31,47 @@ public class ArrayCalculator{
             dMultiple *= array[i];
         }
     }
-    public String sum(int array[]){
-        return "\nСумма элементов массива: " + iCount;
+    public void sum(int array[]){
+        System.out.println("\nСумма элементов массива: " + iCount);
     }
-    public String sum(double array[]){
-        return "\nСумма элементов массива: " + dCount;
+    public void sum(double array[]){
+        System.out.println( "\nСумма элементов массива: " + dCount);
     }
-    public String minDivMax(int array[]) {
-        return "\nДеление min элемента на max: " + (double)iMin / iMax;
+    public void minDivMax(int array[]) {
+        System.out.println("\nДеление min элемента на max: " + (double)iMin / iMax);
     }
-    public String minDivMax(double array[]){
-        return "\nДеление min элемента на max: " +  dMin / dMax;
+    public void minDivMax(double array[]){
+        System.out.println( "\nДеление min элемента на max: " +  dMin / dMax);
     }
-    public String maxPositive(int arr[]){
-        return "\nНайбольший положительный элемент: " + iMax;
+    public void maxPositive(int arr[]){
+        System.out.println("\nНайбольший положительный элемент: " + iMax);
     }
-    public String maxPositive(double array[]){
-        return "\nНайбольший положительный элемент: " + dMax;
+    public void maxPositive(double array[]){
+        System.out.println("\nНайбольший положительный элемент: " + dMax);
     }
-    public String multiplication(int array[]){
-        return "\nПроизведение всех элементов: " + iMultiple;
+    public void multiplication(int array[]){
+        System.out.println("\nПроизведение всех элементов: " + iMultiple);
     }
-    public String multiplication(double array[]){
-        return"\nПроизведение всех элементов: " + dMultiple;
+    public void multiplication(double array[]){
+        System.out.println("\nПроизведение всех элементов: " + dMultiple);
     }
-    public String modulus(int array[]){
-        return "\nМодуль первого элемента: " + Math.abs(array[0]) + "\nМодуль последнего " + Math.abs(array[array.length - 1]);
+    public void modulus(int array[]){
+        System.out.println("\nМодуль первого элемента: " + Math.abs(array[0]) + "\nМодуль последнего " + Math.abs(array[array.length - 1]));
     }
-    public String modulus(double array[]){
-        return"\nмодуль первого элемента: " + Math.abs(array[0]) + "; модуль последнего: " + Math.abs(array[array.length - 1]);
+    public void modulus(double array[]){
+        System.out.println("\nмодуль первого элемента: " + Math.abs(array[0]) + "; модуль последнего: " + Math.abs(array[array.length - 1]));
     }
 
-    public String secondLargest(int array[]) {
+    public void secondLargest(int array[]) {
         int iSecondMax = array[0], numer = 1;
         for (int i = 0; i < array.length; i++)
             if (iSecondMax < array[i] && array[i] != iMax) {
                 iSecondMax = array[i];
                 numer = i + 1;
             }
-        return "\nВторой по величине элемент = " + iSecondMax + " №" + numer;
+        System.out.println("\nВторой по величине элемент = " + iSecondMax + " №" + numer);
     }
-    public String secondLargest(double array[]) {
+    public void secondLargest(double array[]) {
         double dSecondMax = array[0];
         int numer = 1;
         for (int i = 0; i < array.length; i++)
@@ -79,6 +79,6 @@ public class ArrayCalculator{
                 dSecondMax = array[i];
                 numer = i + 1;
             }
-        return "\nВторой по величине элемент: " + dSecondMax + " №" + numer;
+        System.out.println("\nВторой по величине элемент: " + dSecondMax + " №" + numer);
     }
 }
