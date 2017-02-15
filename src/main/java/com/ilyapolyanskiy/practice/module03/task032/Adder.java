@@ -5,7 +5,6 @@ package com.ilyapolyanskiy.practice.module03.task032;
  */
 public class Adder extends Arithmetic{
     public boolean check(int a, int b){
-        if (a >= b) return true;
-        else return false;
+        return (a >= b);
     }
 }

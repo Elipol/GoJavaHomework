@@ -10,6 +10,5 @@ public class Main {
 
         System.out.println(theArithmet.add(15, 18));
         System.out.println(theAdder.check(15, 18));
-
     }
 }
