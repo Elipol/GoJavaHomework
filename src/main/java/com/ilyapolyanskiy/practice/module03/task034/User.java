@@ -70,14 +70,19 @@ public class User {
 
     public void withdraw(int summ){
         double commission = (double)summ * 0.05;
+        double doubleComission = commission * 2;
 
-        if (balance - (commission + summ) > 0 && summ < 1000)
+        if (balance - (commission + summ) > 0 && summ < 1000) {
             balance -= (commission + summ);
+        }
 
-        else if (balance - (commission * 2 + summ) > 0)
-            balance -= (commission * 2 + summ);
-        else
+        else if (balance - (doubleComission + summ) > 0) {
+            balance -= (doubleComission + summ);
+        }
+
+        else {
             System.out.println("not enough money");
+        }
     }
 
     public int companyNameLength(){
