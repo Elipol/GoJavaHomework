@@ -2,9 +2,7 @@ package com.ilyapolyanskiy.practice.module04.task041;
 
 import java.util.Currency;
 
-/**
- * Created by ignipolari on 21.02.17.
- */
+
 public abstract class Bank {
     private  long totalCapital, id, rating;
     private String bankCountry;
