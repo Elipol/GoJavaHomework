@@ -12,6 +12,26 @@ private int limitOfWithdrawal, limitOfFunding, monthlyRate, commission;
         super(totalCapital, id, rating, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee);
     }
 
+    public EUBank() {
+
+    }
+
+    public void setLimitOfWithdrawal(int limitOfWithdrawal) {
+        this.limitOfWithdrawal = limitOfWithdrawal;
+    }
+
+    public void setLimitOfFunding(int limitOfFunding) {
+        this.limitOfFunding = limitOfFunding;
+    }
+
+    public void setMonthlyRate(int monthlyRate) {
+        this.monthlyRate = monthlyRate;
+    }
+
+    public void setCommission(int commission) {
+        this.commission = commission;
+    }
+
     int getLimitOfWithdrawal() {
         return limitOfWithdrawal;
     }
@@ -20,7 +40,9 @@ private int limitOfWithdrawal, limitOfFunding, monthlyRate, commission;
         return limitOfFunding;
     }
 
-    int getMonthlyRate() {return monthlyRate;}
+    int getMonthlyRate() {
+        return monthlyRate;
+    }
 
     int getCommission(int summ) {
         return commission;

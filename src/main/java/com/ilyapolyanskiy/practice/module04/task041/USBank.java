@@ -12,6 +12,25 @@ public class USBank extends Bank {
         super(totalCapital, id, rating, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee);
     }
 
+    public USBank() {
+    }
+
+    public void setLimitOfWithdrawal(int limitOfWithdrawal) {
+        this.limitOfWithdrawal = limitOfWithdrawal;
+    }
+
+    public void setLimitOfFunding(int limitOfFunding) {
+        this.limitOfFunding = limitOfFunding;
+    }
+
+    public void setMonthlyRate(int monthlyRate) {
+        this.monthlyRate = monthlyRate;
+    }
+
+    public void setCommission(int commission) {
+        this.commission = commission;
+    }
+
     int getLimitOfWithdrawal() {
         return limitOfWithdrawal;
     }
@@ -20,7 +39,9 @@ public class USBank extends Bank {
         return limitOfFunding;
     }
 
-    int getMonthlyRate() {return monthlyRate;}
+    int getMonthlyRate() {
+        return monthlyRate;
+    }
 
     int getCommission(int summ) {
         return commission;

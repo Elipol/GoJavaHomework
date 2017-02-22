@@ -10,6 +10,9 @@ public abstract class Bank {
     private int numberOfEmployees;
     private double avrSalaryOfEmployee;
 
+    public Bank() {
+    }
+
     public Bank(long totalCapital, long id, long rating, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
         this.totalCapital = totalCapital;
         this.id = id;

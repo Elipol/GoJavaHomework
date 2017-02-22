@@ -11,6 +11,27 @@ public class ChinaBank extends Bank{
     public ChinaBank(long totalCapital, long id, long rating, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
         super(totalCapital, id, rating, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee);
     }
+
+    public ChinaBank() {
+
+    }
+
+    public void setLimitOfWithdrawal(int limitOfWithdrawal) {
+        this.limitOfWithdrawal = limitOfWithdrawal;
+    }
+
+    public void setLimitOfFunding(int limitOfFunding) {
+        this.limitOfFunding = limitOfFunding;
+    }
+
+    public void setMonthlyRate(int monthlyRate) {
+        this.monthlyRate = monthlyRate;
+    }
+
+    public void setCommission(int commission) {
+        this.commission = commission;
+    }
+
     int getLimitOfWithdrawal() {return limitOfWithdrawal;}
 
     int getLimitOfFunding() {

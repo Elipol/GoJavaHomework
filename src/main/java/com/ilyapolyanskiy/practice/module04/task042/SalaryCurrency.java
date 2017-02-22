@@ -5,9 +5,9 @@ package com.ilyapolyanskiy.practice.module04.task042;
  */
 public class SalaryCurrency {
     public enum Currency{
-        USD,EUR;
+        USD,EUR
     }
-    Currency name;
+    public Currency name;
 
     public SalaryCurrency(Currency name) {
         this.name = name;
