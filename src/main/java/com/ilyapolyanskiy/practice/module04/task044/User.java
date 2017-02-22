@@ -10,7 +10,7 @@ public class User {
     private String name, companyName;
     private double balance;
     private int monthsOfEmployment, salary;
-    private Bank bank;
+    public Bank bank;
 
     @Override
     public String toString() {
