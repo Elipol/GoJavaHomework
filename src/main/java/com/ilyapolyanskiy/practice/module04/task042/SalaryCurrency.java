@@ -1,4 +1,4 @@
-package com.ilyapolyanskiy.practice.module04.trask042;
+package com.ilyapolyanskiy.practice.module04.task042;
 
 /**
  * Created by ignipolari on 22.02.17.
