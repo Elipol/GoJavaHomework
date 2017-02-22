@@ -10,22 +10,20 @@ import com.ilyapolyanskiy.practice.module04.task044.User;
  */
 public class Main {
     public static void main(String[] args) {
-        User userUS1 = new User();
-        User userUS2 = new User();
-        User userUS3 = new User();
-        User userUS4 = new User();
-        User userUS5 = new User();
-        User userUS6 = new User();
+        int userAmount = 6;
+        User users[] = new User[userAmount];
 
-        userUS1.bank = new USBank();
-        userUS2.bank = new USBank();
+        users[0].bank = new USBank();
+        users[1].bank = new USBank();
 
-        userUS3.bank = new EUBank();
-        userUS4.bank = new EUBank();
+        users[2].bank = new EUBank();
+        users[3].bank = new EUBank();
 
-        userUS5.bank = new ChinaBank();
-        userUS6.bank = new ChinaBank();
-        
+        users[4].bank = new ChinaBank();
+        users[5].bank = new ChinaBank();
+
+        for(int i = 0; i < userAmount; i++)
+            System.out.println(users[i]);
     }
 
 }
