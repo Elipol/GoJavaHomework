@@ -1,29 +1,36 @@
 package com.ilyapolyanskiy.practice.module04.task045;
 
-import com.ilyapolyanskiy.practice.module04.task041.ChinaBank;
-import com.ilyapolyanskiy.practice.module04.task041.EUBank;
+import com.ilyapolyanskiy.practice.module04.task041.Bank;
 import com.ilyapolyanskiy.practice.module04.task041.USBank;
-import com.ilyapolyanskiy.practice.module04.task044.User;
 
 /**
- * Created by ignipolari on 22.02.17.
+ * Created by ignipolari on 27.02.17.
  */
 public class Main {
     public static void main(String[] args) {
-        int userAmount = 6;
-        User users[] = new User[userAmount];
 
-        users[0].bank = new USBank();
-        users[1].bank = new USBank();
+        Bank Capital = new USBank();
+        Bank EIB = new USBank();
+        Bank ADBC = new USBank();
 
-        users[2].bank = new EUBank();
-        users[3].bank = new EUBank();
+        User user1 = new User();
+        User user2 = new User();
+        User user3 = new User();
+        User user4 = new User();
+        User user5 = new User();
+        User user6 = new User();
 
-        users[4].bank = new ChinaBank();
-        users[5].bank = new ChinaBank();
+        user1.setBank(Capital);
+        user2.setBank(Capital);
+        user3.setBank(EIB);
+        user4.setBank(EIB);
+        user5.setBank(ADBC);
+        user6.setBank(ADBC);
 
-        for(int i = 0; i < userAmount; i++)
-            System.out.println(users[i]);
+        System.out.println(user1 + "\n" + user2 + "\n" + user3 + "\n" + user4 + "\n" + user5 + "\n" + user6);
+
+
+
+
     }
-
 }
