@@ -1,5 +1,7 @@
 package com.ilyapolyanskiy.practice.module04.task041;
 
+import com.ilyapolyanskiy.practice.module04.task042.SalaryCurrency;
+
 import java.util.Currency;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Currency;
 public class ChinaBank extends Bank{
     private int limitOfWithdrawal, limitOfFunding, monthlyRate, commission;
 
-    public ChinaBank(long totalCapital, long id, long rating, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
+    public ChinaBank(long totalCapital, long id, long rating, String bankCountry, SalaryCurrency.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
         super(totalCapital, id, rating, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee);
     }
 
@@ -42,5 +44,10 @@ public class ChinaBank extends Bank{
 
     int getCommission(int summ) {
         return commission;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

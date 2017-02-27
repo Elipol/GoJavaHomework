@@ -1,5 +1,7 @@
 package com.ilyapolyanskiy.practice.module04.task041;
 
+import com.ilyapolyanskiy.practice.module04.task042.SalaryCurrency;
+
 import java.util.Currency;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Currency;
 public class EUBank extends Bank{
 private int limitOfWithdrawal, limitOfFunding, monthlyRate, commission;
 
-    public EUBank(long totalCapital, long id, long rating, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
+    public EUBank(long totalCapital, long id, long rating, String bankCountry, SalaryCurrency.Currency currency, int numberOfEmployees, double avrSalaryOfEmployee) {
         super(totalCapital, id, rating, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee);
     }
 

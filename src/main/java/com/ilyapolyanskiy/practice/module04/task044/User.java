@@ -6,11 +6,11 @@ import com.ilyapolyanskiy.practice.module04.task041.Bank;
  * Created by ignipolari on 22.02.17.
  */
 public class User {
-    private long id;
-    private String name, companyName;
-    private double balance;
-    private int monthsOfEmployment, salary;
-    public Bank bank;
+    protected long id;
+    protected String name, companyName;
+    protected double balance;
+    protected int monthsOfEmployment, salary;
+    protected Bank bank;
 
     @Override
     public String toString() {
