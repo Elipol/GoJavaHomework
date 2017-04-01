@@ -2,60 +2,26 @@ package com.ilyapolyanskiy.practice.module05.task055;
 
 import com.ilyapolyanskiy.practice.module05.task051_052.Room;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 
 /**
  * Created by ignipolari on 26.03.17.
  */
-public class HotelDataAccess implements DAO{
-    public CodeDB codeDB = new CodeDB();
+public class HotelDataAccess extends DAO{
+    HotelDBQuerier rass = new HotelDBQuerier();
+    @Override
+    protected void save(Room room) throws SQLException {rass.dBPut(room);}
 
-    public Room save(Room room) {
-        codeDB.saveToDB(room);
-        System.out.println("Room is successfully saved to DB\n");
-        return room;
+    @Override
+    protected void delete(Room room) {rass.dBDelete(room.getId());}
+
+    @Override
+    protected void update(Room room) throws SQLException {rass.dBDelete(room.getId()); rass.dBPut(room);}
+
+    @Override
+    public Room findById(int id) {return rass.dBRead(id)[0];}
+
+    public Room[] FindByValues(int price, int persons, String city, String hotel) {
+        return rass.dBRead(price, persons, city, hotel);
     }
-
-    public boolean delete(Room room) {
-        codeDB.deleteFromDB(room);
-        System.out.println("Room is successfully removed\n");
-        return true;
-    }
-
-    public Room update(Room room) {
-        delete(room);
-        save(room);
-
-        System.out.println("Room status is updated\n");
-        return room;
-    }
-
-    public Room findById(long id) {
-        return codeDB.hotelSystemMapId.get(id);
-    }
-
-    public Room[] FindByCode(Room room) {
-        int length = codeDB.hotelSystemMapCode.get(codeDB.roomCodeCalc(room)).size();
-        Room[] rooms = new Room[length];
-        for (int i = 0; i < length; i++)
-            rooms[i] = new Room();
-
-        return codeDB.hotelSystemMapCode.get(codeDB.roomCodeCalc(room)).toArray(rooms);
-    }
-
-    public Room[] FindByCode(int price, int persons, String city, String hotel) {
-        ArrayList<Room> arrlist = new ArrayList<Room>();
-
-        if(!(codeDB.hotelSystemMapCode.get(codeDB.roomCodeCalc(price, persons, city, hotel)) == null))
-            arrlist.addAll(codeDB.hotelSystemMapCode.get(codeDB.roomCodeCalc(price, persons, city, hotel)));
-
-        Room[] rooms = new Room[arrlist.size()];
-        for (int i = 0; i < arrlist.size(); i++)
-            rooms[i] = new Room();
-
-        rooms = arrlist.toArray(rooms);
-        return rooms;
-    }
-
-
 }

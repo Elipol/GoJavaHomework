@@ -10,6 +10,6 @@ public class BookingComAPI implements API{
     private HotelDataAccess hda = new HotelDataAccess();
 
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        return hda.FindByCode(price, persons, city, hotel);
+        return hda.FindByValues(price, persons, city, hotel);
     }
 }

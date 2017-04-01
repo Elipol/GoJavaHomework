@@ -7,16 +7,17 @@ import java.util.Date;
  * Created by ignipolari on 26.03.17.
  */
 public class Room {
-    private long id;
+    private int id;
     private int price, persons;
     private Date dateAvailableFrom = new Date();
     private String hotelName, cityName;
-
+    private static int counter = 0;
     public Room(){
+        this.id = ++counter;
     }
 
-    public Room(long id, int price, int persons, Date dateAvailableFrom, String hotelName, String cityName) {
-        this.id = id;
+    public Room( int price, int persons, Date dateAvailableFrom, String cityName, String hotelName) {
+        this.id = ++counter;
         this.price = price;
         this.persons = persons;
         this.dateAvailableFrom = dateAvailableFrom;
@@ -24,12 +25,8 @@ public class Room {
         this.cityName = cityName;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public int getPrice() {
@@ -84,9 +81,13 @@ public class Room {
         return cityName != null ? cityName.equals(room.cityName) : room.cityName == null;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = (id ^ (id >>> 32));
         result = 31 * result + price;
         result = 31 * result + persons;
         result = 31 * result + dateAvailableFrom.hashCode();

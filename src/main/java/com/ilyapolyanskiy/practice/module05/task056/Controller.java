@@ -19,7 +19,6 @@ public class Controller {
 
     public API api1 = new GoogleAPI();
     public Room[] requestRoom(int price, int persons, String city, String hotel){
-        //create new DB
         return apis[0].findRooms(price, persons, city, hotel);
     }
 

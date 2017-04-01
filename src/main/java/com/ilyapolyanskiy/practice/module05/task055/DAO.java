@@ -2,13 +2,14 @@ package com.ilyapolyanskiy.practice.module05.task055;
 
 import com.ilyapolyanskiy.practice.module05.task051_052.Room;
 
+import java.sql.SQLException;
+
 /**
  * Created by ignipolari on 26.03.17.
  */
-public interface DAO {
-    Room save(Room room);
-    boolean delete(Room room);
-    Room update(Room room);
-    Room findById(long id);
-    Object[] FindByCode(Room room);
+abstract class DAO {
+    protected void save(Room room) throws SQLException{};
+    protected void delete(Room room){};
+    protected void update(Room room) throws SQLException{};
+    Room findById(int id){return null;};
 }
